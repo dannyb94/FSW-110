@@ -50,5 +50,8 @@ for (var i = 0; i < 3; i++){
 
 var myFooter = document.createElement("footer");
 myFooter.id = 'footerId';
-myFooter.innerHTML = "<footer></footer>";
 document.body.appendChild(myFooter);
+
+var myFooterPar = document.createElement("p");
+myFooterPar.textContent = "This was created by D.";
+myFooter.append(myFooterPar);
