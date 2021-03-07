@@ -11,9 +11,9 @@ Requirements:
 -You will append created elements to the <body> tag of your html page to produce the entire site, so the only HTML tag they will add to your HTML page is the script tag.
 */
 
-var myDiv = document.createElement("div");
-myDiv.id = 'myNav';
-document.body.appendChild(myDiv);
+var myNavBar = document.createElement("nav");
+myNavBar.id = 'myNav';
+document.body.appendChild(myNav);
 
 var myLink1 = document.createElement("span");
 myLink1.textContent = "Home";
