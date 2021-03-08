@@ -1,12 +1,26 @@
-let h1Node = document.getElementById('inTheBeginning');
-h1Node.textContent = 'Welcome to my JS site';
+var myHeader1 = document.createElement("h1");
+myHeader1.id = "inTheBeginning";
+myHeader1.textContent = "Welcome to my JS site";
+document.body.appendChild(myHeader1);
 
-document.querySelector('p').textContent = 'All of this was created with Javascript';
+var myPar1 = document.createElement("p");
+myPar1.textContent = "All of this was created with Javascript";
+document.body.appendChild(myPar1);
 
-var pillow = document.querySelectorAll('.pillow');
-console.log(Array.from(pillow));
-for (var i = 0; i < pillow.length; i++){
-    pillow[0].textContent = "It Was Good Until It Wasn't";
-    pillow[1].textContent = "Good to Know";
-    pillow[2].textContent = "Table For Two";
-}
+var myList = document.createElement("ol");
+document.body.appendChild(myList);
+
+var listItems = document.createElement("li");
+listItems.classList.add("pillow");
+listItems.textContent = "It Was Good Until It Wasn't";
+myList.appendChild(listItems);
+
+var listItems = document.createElement("li");
+listItems.classList.add("pillow");
+listItems.textContent = "Good to Know";
+myList.appendChild(listItems);
+
+var listItems = document.createElement("li");
+listItems.classList.add("pillow");
+listItems.textContent = "Table For Two";
+myList.appendChild(listItems);
