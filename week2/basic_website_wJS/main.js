@@ -13,19 +13,19 @@ Requirements:
 
 var myNavBar = document.createElement("nav");
 myNavBar.id = 'myNav';
-document.body.appendChild(myNav);
+document.body.appendChild(myNavBar);
 
-var myLink1 = document.createElement("span");
+var myLink1 = document.createElement("a");
 myLink1.textContent = "Home";
-myDiv.append(myLink1)
+myNavBar.append(myLink1)
 
-var myLink2 = document.createElement("span");
+var myLink2 = document.createElement("a");
 myLink2.textContent = "More";
-myDiv.append(myLink2)
+myNavBar.append(myLink2)
 
-var myLink3 = document.createElement("span");
+var myLink3 = document.createElement("a");
 myLink3.textContent = "Contact";
-myDiv.append(myLink3)
+myNavBar.append(myLink3)
 
 
 var myHeader = document.createElement("h1");
@@ -52,6 +52,7 @@ var myFooter = document.createElement("footer");
 myFooter.id = 'footerId';
 document.body.appendChild(myFooter);
 
-var myFooterPar = document.createElement("p");
-myFooterPar.textContent = "This was created by D.";
-myFooter.append(myFooterPar);
+var x = "\u00A9 This was created by D.";
+var myFooterElmt = document.createElement("section");
+myFooterElmt.textContent = x;
+myFooter.append(myFooterElmt);
