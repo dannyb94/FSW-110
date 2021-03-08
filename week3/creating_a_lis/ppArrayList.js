@@ -30,12 +30,10 @@ style.innerHTML = `h1 {
 document.head.appendChild(style);
 
 const names = ["steve", "larry", "joe", "shirley", "steph", "nate", "rick", "emily"];
-const names2 = names;
-names2.push(["jessica", "alex", "damien"]);
+const names2 = names;   
 
-for (var i = 0; i < 4; i++){
-    var newPar = document.createElement("p");
-    newPar.textContent = names2;
-    document.body.appendChild(newPar);
-};
- 
+for (var i = 0; i < names2.length; i++){
+    var newName = document.createElement("li");
+    newName.textContent = names2[i];
+    document.body.appendChild(newName);
+}
