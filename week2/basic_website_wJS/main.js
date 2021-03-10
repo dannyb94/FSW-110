@@ -27,6 +27,11 @@ var myLink3 = document.createElement("a");
 myLink3.textContent = "Contact";
 myNavBar.append(myLink3)
 
+var style = document.createElement('style');
+style.innerHTML = `a {
+    margin: 10px;
+}`;
+document.body.appendChild(style);
 
 var myHeader = document.createElement("h1");
 myHeader.innerHTML = "<h1>Header</h1>";
