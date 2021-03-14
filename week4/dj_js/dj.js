@@ -46,23 +46,23 @@ myContr.addEventListener('keypress', function(_event) {
 })*/
 
 myContr.addEventListener('mouseover', (event) => {
-    myContr.style.backgroundColor = 'green';
-});
-
-myContr.addEventListener('pointerdown', (event) => {
-    myContr.style.backgroundColor = 'yellow';
-});
-
-myContr.addEventListener('pointerup', (event) => {
     myContr.style.backgroundColor = 'blue';
 });
 
-myContr.addEventListener('dblclick', (event) => {
+myContr.addEventListener('pointerdown', (event) => {
     myContr.style.backgroundColor = 'red';
 });
 
+myContr.addEventListener('pointerup', (event) => {
+    myContr.style.backgroundColor = 'yellow';
+});
+
+myContr.addEventListener('dblclick', (event) => {
+    myContr.style.backgroundColor = 'green';
+});
+
 window.addEventListener('scroll', (event) => {
-    myContr.style.backgroundColor = 'purple';
+    myContr.style.backgroundColor = 'orange';
 });
 
 window.addEventListener('load', (event) => {
