@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Submit Events2</title>
+    </head>
+    <body>
+        <h2>Customer Satisfaction Survey</h2>
+        <form>
+            <p><label for="firstName">First Name <input type="text" size="25" id="firstName" name="firstName" required/></label></p>
+            <p><label for="lastName">Last Name <input type="text" size="25" id="lastName" name="lastName" required/></label></p>
+            <p><label for="age">Age <input type="number" size="3" id="age" name="age" required/></label></p>
+        </form>
+
+        <p class="subSect">Have you shopped with us before?</p>
+        <form>
+            <input type="radio" id="yes" name="answer" value="yes"/>
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="answer" value="no"/>
+            <label for="no">No</label>
+        </form>
+
+        <p class="subSect">Select your gender:</p>
+
+        <form>
+            <input type="radio" class="gender" name="gender" value="Female"/>
+            <label for="fem">Female</label>
+            <input type="radio" class="gender" name="gender" value="Male"/>
+            <label for="male">Male</label>
+        </form>
+
+
+      <!--  <form>
+            <input type="radio" id="fem" name="gender" value="Female" checked/>
+            <label for="fem">Female</label>
+            <input type="radio" id="male" name="gender" value="Male"/>
+            <label for="male">Male</label>
+        </form>
+-->
+        <p class="subSect">How likely are you to recommend us to family and friends? Rate your experince.</p>
+        <form>
+            <label>Not likely <input type="range" id="slider" min="0" max="10" value="5"/> Highly likely</label>
+        </form>
+
+        <p class="subSect">Do you have any dietary restrictions?</p>
+        <form>
+            <input type="checkbox" class="diet" name="Vegetarian" value="Vegetarian"/>
+            <label for="Vegetarian">Vegetarian</label>
+            <input type="checkbox" class="diet" name="Keto" value="Keto"/>
+            <label for="Keto">Keto</label>
+            <input type="checkbox" class="diet" name="Vegan" value="Vegan"/>
+            <label for="Vegan">Vegan</label>
+            <input type="checkbox" class="diet" name="Gluten-free" value="Gluten-free"/>
+            <label for="Gluten-free">Gluten-Free</label>
+        </form>
+        <br><br>
+        <button id="btn">Submit Survey</button>
+
+        <script src="work.js"></script>
+    </body>
