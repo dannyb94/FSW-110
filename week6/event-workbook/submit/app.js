@@ -3,5 +3,5 @@
 // remember to pass "e" into the callback function
 
 document.querySelector('button').addEventListener('click', (event) => {
-    event.preventDefault()
+    event.preventDefault();
 });
