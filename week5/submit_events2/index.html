@@ -28,18 +28,15 @@
             <input type="radio" class="gender" name="gender" value="Male"/>
             <label for="male">Male</label>
         </form>
-
-
-      <!--  <form>
-            <input type="radio" id="fem" name="gender" value="Female" checked/>
-            <label for="fem">Female</label>
-            <input type="radio" id="male" name="gender" value="Male"/>
-            <label for="male">Male</label>
-        </form>
--->
         <p class="subSect">How likely are you to recommend us to family and friends? Rate your experince.</p>
         <form>
-            <label>Not likely <input type="range" id="slider" min="0" max="10" value="5"/> Highly likely</label>
+            <label for="rating">Choose a rating:</label>
+            <select id="rating" name="rating">
+                <option value="Not likely">Not likely</option>
+                <option value="Likely">Likely</option>
+                <option value="Highly likely">Highly likely</option>
+            </select>
+            <!--<label>Not likely <input type="" id="slider" min="0" max="10" value="5"/> Highly likely</label>-->
         </form>
 
         <p class="subSect">Do you have any dietary restrictions?</p>

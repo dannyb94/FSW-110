@@ -33,19 +33,10 @@ form {
 document.head.appendChild(style);
 
 var btnClick = document.getElementById("btn");
-/*
-btnClick.addEventListener('click', (event) => {
-    var fn = document.getElementById('firstName').value;
-    var ln = document.getElementById('lastName').value;
-    var age = document.getElementById('age').value;
-    var femGndr = document.getElementById('fem').value;
-    var maleGndr = document.getElementById('male').value;
-    var dietRstrct = document.getElementsByClassName('diet').value;
-    alert(`${fn} \n ${ln} \n ${age} \n ${femGndr} \n ${maleGndr} \n ${dietRstrct}`);
-})
-*/
 
 btnClick.addEventListener('click', (event) => {
+    console.log(document.getElementsByClassName('gender')[1].value)
+
     var fn = document.getElementById('firstName').value;
     var ln = document.getElementById('lastName').value;
     var age = document.getElementById('age').value;
