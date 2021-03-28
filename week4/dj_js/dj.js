@@ -23,27 +23,19 @@ style.innerHTML = `div {
 }`;
 document.head.appendChild(style);
 
-/**/var colorMap = {
-    'g' : 'green',
-    'y' : 'yellow',
-    'b' : 'blue',
-    'r' : 'red',
-    'p' : 'purple'
-};
-
-myContr.addEventListener('keypress', function(_event) {
-    //if(event.key == 71){
-        document.getElementById('container').style.backgroundColor = colorMap;
-        //return 'green';
-    //}
-    //console.log(e.key)
-});
-
-/*myContr.addEventListener('keydown', (event) => {
-    if (event.key == 'g'){
-        return colorMap;
+window.addEventListener('keydown', (event) => {
+    if(event.key == 'g'){
+        myContr.style.backgroundColor = 'green';
+    } else if(event.key == 'y'){
+        myContr.style.backgroundColor = 'yellow';
+    } else if(event.key == 'b'){
+        myContr.style.backgroundColor = 'blue';
+    } else if(event.key == 'r'){
+        myContr.style.backgroundColor = 'red';
+    } else if(event.key == 'p'){
+        myContr.style.backgroundColor = 'purple';
     }
-})*/
+});
 
 myContr.addEventListener('mouseover', (event) => {
     myContr.style.backgroundColor = 'blue';
@@ -61,7 +53,7 @@ myContr.addEventListener('dblclick', (event) => {
     myContr.style.backgroundColor = 'green';
 });
 
-window.addEventListener('scroll', (event) => {
+window.addEventListener('mousewheel', (event) => {
     myContr.style.backgroundColor = 'orange';
 });
 
