@@ -36,6 +36,7 @@ window.addEventListener('keydown', (event) => {
         myContr.style.backgroundColor = 'purple';
     } else if(event.key == 'o'){
         myContr.style.backgroundColor = 'orange';
+    }
 });
 
 myContr.addEventListener('mouseover', (event) => {
