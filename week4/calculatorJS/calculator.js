@@ -37,7 +37,7 @@ myContr1.append(myBtn);
 myBtn.addEventListener('click', add);
 
 var mySpace = document.createElement("br");
-myContr1.append(mySpace);
+document.body.appendChild(mySpace);
 
 //------------------------SUB-----------------------------------
 var myContr2 = document.createElement("div");
