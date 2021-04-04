@@ -99,6 +99,7 @@ var btnClick = document.getElementById('btn');
 var finalOutput = document.getElementById('output');
 var listTitle = document.getElementById('title-input');
 var listItems = document.getElementsByName('list-item');
+//var deleteAll = document.getElementsByClassName('delete');
 
 btnClick.addEventListener('click', (e) => {
     
@@ -123,9 +124,22 @@ btnClick.addEventListener('click', (e) => {
 
 document.querySelector('button').addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(e.target.id)
-    console.log(document.getElementById(e.target.id))
-    console.log(e.target.closest('.list-item'))
+    //console.log(e.target.id)
+    //console.log(document.getElementById(e.target.id))
+    //console.log(e.target.closest('.list-item'))
     document.getElementById(e.target.id).remove()
     e.target.remove()
-});
+});/**/
+
+/*const buttons = document.querySelectorAll('button');
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', e => e.preventDefault());
+}
+document.querySelector('button').addEventListener('click', (e) => {
+    e.preventDefault();
+    //console.log(e.target.id)
+    //console.log(document.getElementById(e.target.id))
+    //console.log(e.target.closest('.list-item'))
+    document.getElementById(e.target.id).remove()
+    e.target.remove()
+});*/
