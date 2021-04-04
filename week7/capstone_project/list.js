@@ -2,15 +2,14 @@
 Project Requirements:
 
 X The form must have at least 2 inputs (ex: title, description).
-On submit, the form should clear inputs and the user’s text should show up in the list below the form.
-Each of the items listed out should also display a delete button that removes that item from the list when clicked.
+X On submit, the form should clear inputs and the user’s text should show up in the list below the form.
+X Each of the items listed out should also display a delete button that removes that item from the list when clicked.
 X Site must be fully styled and responsive.
 
 G-Fonts:
 font-family: 'Loved by the King', cursive;
 font-family: 'Montserrat', sans-serif;
 */
-//window.onload = initForm;
 
 var style = document.createElement('style');
 style.innerHTML = `html {
@@ -77,13 +76,13 @@ section {
 #the-list {
     list-style-type: circle;
 }
-.delete {
+#delete {
     background-color: lightgray;
     border: 1px solid lightgray;
     margin-left: 5px;
     color: black;
 }
-.delete:hover {
+#delete:hover {
     background-color: darkgray;
     color: white;
     border: 1px solid darkgray;
@@ -97,39 +96,36 @@ section {
 document.head.appendChild(style);
 
 var btnClick = document.getElementById('btn');
+var finalOutput = document.getElementById('output');
 var listTitle = document.getElementById('title-input');
 var listItems = document.getElementsByName('list-item');
-var deleteLine = document.getElementsByClassName('delete');
-var finalOutput = document.getElementById('output');
-
-
 
 btnClick.addEventListener('click', (e) => {
-    console.log(listItems.value, listTitle.value);
     
-    e.preventDefault()
     if (e.target.id == 'btn'){
-        document.getElementById('output').textContent = `${listTitle.value}\n${listItems.value}`;
-    } 
-    if(listItems.value && listTitle.value > 1){
-        var li = document.createElement('li');
-        document.getElementById('output').append(li);
-        document.getElementById('outout').textContent = `${listTitle.value}\n${listItems.value}`;
+        finalOutput.textContent = listTitle.value;
+    }
+    if(listTitle.value > 1){
+        finalOutput.textContent = listTitle.value;
     } else if(e.target.id == 'btn'){
         listTitle.value = "";
-        listItems.value = "";
+    }
+   for(i = 0; i < listItems.length; i++){
+        if(listItems[i].value.length > 0){
+            var li = document.createElement('li');
+            finalOutput.append(li);
+            li.textContent = listItems[i].value
+        } if(e.target.id == 'btn'){
+            listItems[i].value = "";
+        }
     }
 });
 
-
-
-
-/*button.addEventListener("click", addItem);
-list.addEventListener("click", (e) => {
-    var btn = document.getElementsByClassName("del");
-    for(i=0; i<btn.length; i++){
-        if(e.target == btn[i]){
-        let li = btn[i].parentNode;
-        list.removeChild(li);
-    }
-}});*/
+document.querySelector('button').addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(e.target.id)
+    console.log(document.getElementById(e.target.id))
+    console.log(e.target.closest('.list-item'))
+    document.getElementById(e.target.id).remove()
+    e.target.remove()
+});
